@@ -1,11 +1,137 @@
+:root{
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-color: #00733C;
+  --basic-color-light: #00B25C;
+  --background: #ececec;
+
+}
+
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 175%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .page-body{
-  @media screen { min-width: 768px;
-    display: grid;
-  grid-template-columns: 300px, 1fr;
-  }
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--background);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* HEADER */
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  background-color: var(--basic-color);
+  color: var(--basic-white);
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.header__avatar {
+  border-radius: 50%;
+}
+
+.position::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 1px;
+  background-color: var(--basic-white);
+  margin: auto;
   
 }
-.header {
 
+.location {
+  opacity: 0.6;
+  text-align: left;
+  padding-left: 20px;
+}
 
+.link {
+  color: var(--basic-black);
+}
+
+.header .link {
+  color: var(--basic-white);
+}
+
+.contacts__list {
+  /* list-style: none; */
+  color: var(--basic-white);
+  opacity: 0.6;
+  text-align: left;
+}
+.contacts__list li {
+  margin-bottom: 10px;
+}
+
+/* MAIN */
+
+.page-main {
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-right: 10px;
+  background-color: var(--basic-white);
+}
+
+h2, h3 {
+  color:var(--basic-color-light);
+  text-transform: uppercase;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 648px) {
+  .page-body {
+    display: block;
+    padding-top: 0;
+    background-color: var(--basic-white);
+  }
+  .grid {
+    display: block;
+  }
 }

@@ -4,31 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
   <title>CV</title>
 </head>
 
 <body class="page-body">
 
   <header class="header">
-    <h1 class="visibility-hidden">Ekaterina Mityashina, Junior frontend developer</h1>
-
     <picture>
-      <img class="heder__avatar" src="img/1.jpg" alt="Аvatar">
+      <img class="header__avatar" src="img/1.jpg" alt="Аvatar" width="150" height="150">
     </picture>
-    <p>Location:</p>
-    <p>Russia, Novorossiysk</p>
+    <h1>Ekaterina Mityashina</h1>
+    <p class="position">Junior frontend developer</p>
+    
+    <p class="location"> <i>Russia, Novorossiysk</i> </p>
 
-    <section>
-       <p>Contacts:</p>
-       <a href="mailto:mityashina.k@ya.ru">email</a>
-       <a href="tel:+79539222313"> +7(953) 922-23-13</a>
-       <a href="https://t.me/seamkate" target="_blank" rel="noopener noreferrer">telegram</a>
+    <section class="contacts">
+      <ul class="contacts__list">
+        <li>
+          <a class="link" href="mailto:mityashina.k@ya.ru">email</a>
+        </li>
+
+        <li>
+          <a class="link" href="tel:+79539222313"> +7(953) 922-23-13</a>
+        </li>
+
+        <li>
+          <a class="link" href="https://t.me/seamkate" target="_blank" rel="noopener noreferrer">telegram</a>
+        </li>
+      </ul>
     </section>
   </header>
 
-  <main>
-    <h2>Junior frontend developer</h2>
+  <main class="page-main">
+    <h2>Information about candidate</h2>
 
     <section>
       <h3>About me</h3>
@@ -47,15 +61,16 @@
         <li>Flex and Grid</li>
         <li>Perfect Pixel</li>
       </ul>
-       <p>I understand the principles of Mobile First and Desktop First and the difference between them, I prefer to use first of it in my projects.</p>
-       <p>I check and optimize the loading of sites using Lighthouse. I use soft retinization of images. I know Gulp and actively use Git.</p>
+      <p>I understand the principles of Mobile First and Desktop First and the difference between them, I prefer to use first of it in my projects.</p>
+      <p>I check and optimize the loading of sites using Lighthouse. I use soft retinization of images. I know Gulp and actively use Git.</p>
     </section>
 
-    <section>
+    <section class="grid">
+      <section>
       <h3>My works</h3>
       <ul>
-        <li><a href="https://github.com/seamkate/sedona">Website for little town Sedona. HTML Academy student's project.</a></li>
-        <li><a href="https://github.com/seamkate/nerds">Nerds. HTML Academy student's project. A simple site without adaptivity with minimal JS.</a></li>
+        <li><a class="link" href="https://github.com/seamkate/sedona">Website for little town Sedona. HTML Academy student's project.</a></li>
+        <li><a class="link" href="https://github.com/seamkate/nerds">Nerds. HTML Academy student's project. A simple site without adaptivity with minimal JS.</a></li>
       </ul>
     </section>
 
@@ -67,6 +82,9 @@
         <li>Spanish: basic.</li>
       </ul>
     </section>
+    </section>
+
+    
   </main>
 </body>
 </html>
